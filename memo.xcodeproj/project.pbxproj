@@ -12,6 +12,9 @@
 		DC03BE83206C0D830059BF8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC03BE81206C0D830059BF8D /* Main.storyboard */; };
 		DC03BE85206C0D830059BF8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC03BE84206C0D830059BF8D /* Assets.xcassets */; };
 		DC03BE88206C0D830059BF8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC03BE86206C0D830059BF8D /* LaunchScreen.storyboard */; };
+		DC9D58812077D322001CD518 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9D58802077D322001CD518 /* Card.swift */; };
+		DC9D58832077D492001CD518 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9D58822077D492001CD518 /* Game.swift */; };
+		DC9D58862077E9CE001CD518 /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9D58852077E9CE001CD518 /* CardsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		DC03BE84206C0D830059BF8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC03BE87206C0D830059BF8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC03BE89206C0D830059BF8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC9D58802077D322001CD518 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		DC9D58822077D492001CD518 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		DC9D58852077E9CE001CD518 /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +66,19 @@
 				DC03BE84206C0D830059BF8D /* Assets.xcassets */,
 				DC03BE86206C0D830059BF8D /* LaunchScreen.storyboard */,
 				DC03BE89206C0D830059BF8D /* Info.plist */,
+				DC9D58842077DE15001CD518 /* Model */,
+				DC9D58852077E9CE001CD518 /* CardsView.swift */,
 			);
 			path = memo;
+			sourceTree = "<group>";
+		};
+		DC9D58842077DE15001CD518 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DC9D58802077D322001CD518 /* Card.swift */,
+				DC9D58822077D492001CD518 /* Game.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +154,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC03BE80206C0D830059BF8D /* ViewController.swift in Sources */,
+				DC9D58862077E9CE001CD518 /* CardsView.swift in Sources */,
+				DC9D58812077D322001CD518 /* Card.swift in Sources */,
 				DC03BE7E206C0D830059BF8D /* AppDelegate.swift in Sources */,
+				DC9D58832077D492001CD518 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
