@@ -11,6 +11,8 @@ class CardsView: UIStackView {
     private let backColor = UIColor.brown
     
     @IBOutlet var cards: [UIButton]!
+    @IBOutlet var uiCounter: UILabel!
+
     
     @IBAction func cardTapped(_ sender: UIButton) {
         if let index = cards.index(of: sender) {
@@ -19,6 +21,7 @@ class CardsView: UIStackView {
     }
     
     func updateView(game: Game) {
+        uiCounter.text = String(game.counter)
         for (i, card) in game.cards.enumerated() {
             let button = cards[i]
             button.isHidden = card.isMatched
@@ -28,6 +31,11 @@ class CardsView: UIStackView {
             else {
                 hide(card: button)
             }
+        }
+    }
+    func initView(game: Game) {
+        for (i, card) in game.cards.enumerated() {
+            cards[i].setTitle(card.id, for: .normal)
         }
     }
     
