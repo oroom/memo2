@@ -19,14 +19,27 @@ class ViewController: UIViewController, CardsViewDelegate {
         stackView.delegate = self
         startGame()
     }
+    private func isGameOver() -> Bool {
+        for card in game.cards {
+            if !card.isMatched  {
+                return false
+            }
+        }
+        return true
+    }
     
     func didTapCard(at index: Int) {
         game.showCard(at: index)
         stackView.updateView(game: game)
+        if isGameOver() {
+            startGame()
+        }
     }
     
     private func startGame() {
         let cards = images.map { Card(isOpened: false, isMatched: false, id: $0) }
         game = Game(cards: cards)
+        stackView.initView(game: game)
+        stackView.updateView(game: game)
     }
 }
